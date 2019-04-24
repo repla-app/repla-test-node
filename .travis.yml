@@ -1,0 +1,7 @@
+language: ruby
+script: make ci
+rvm: 2.3.7
+branches:
+  only:
+    - master
+

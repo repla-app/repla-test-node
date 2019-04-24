@@ -1,0 +1,14 @@
+require 'shellwords'
+
+task default: %i[express]
+
+task express: ['express:tests']
+
+namespace :express do
+  task tests: [:test_express]
+
+  task :test_express do
+    express_tests_file = File.join(__dir__, 'express/tc_express.rb')
+    ruby Shellwords.escape(express_tests_file)
+  end
+end

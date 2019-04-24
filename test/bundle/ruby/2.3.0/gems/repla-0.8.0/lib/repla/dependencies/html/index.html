@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dependencies</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../../resources/css/raster.css">
+  <script id="dependency-template" type="text/x-handlebars-template">
+                <section>
+                        <header>
+                                <h5>Dependency <span class="type">{{type}}</span> <code class="name">{{name}}</code> not found.</h5>
+                        </header>
+                        {{#if installationInstructions}}
+                                <p><blockquote class="installation">To install <code>{{name}}</code>: {{{installationInstructions}}}</blockquote></p>
+                        {{/if}}
+                </section>
+  </script>
+  <script type="text/javascript" src=
+  "../../resources/js/handlebars.js"></script>
+  <script type="text/javascript" src="../../resources/js/zepto.js"></script>
+  <script type="text/javascript" src="js/wcdependencies.js"></script>
+</head>
+<body>
+</body>
+</html>

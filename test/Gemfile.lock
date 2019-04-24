@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    repla (0.8.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  repla
+
+RUBY VERSION
+   ruby 2.3.7p456
+
+BUNDLED WITH
+   2.0.1

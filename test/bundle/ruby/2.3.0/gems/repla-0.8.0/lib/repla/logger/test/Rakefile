@@ -1,0 +1,17 @@
+require 'shellwords'
+
+require_relative 'lib/test_setup'
+
+task default: ['logger:tests']
+
+namespace :logger do
+  task tests: [:clean_up]
+
+  task :test_logger do
+    logger_tests_file = File.join(__dir__, 'tc_logger.rb')
+    ruby Shellwords.escape(logger_tests_file)
+  end
+
+  task clean_up: [:test_logger] do
+  end
+end
