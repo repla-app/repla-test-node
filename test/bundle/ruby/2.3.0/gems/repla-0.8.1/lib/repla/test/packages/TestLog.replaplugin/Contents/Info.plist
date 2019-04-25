@@ -3,18 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>WCName</key>
-	<string>HelloWorld</string>
+	<string>TestLog</string>
 	<key>WCCommand</key>
-	<string>hello_world.rb</string>
+	<string>echo.sh</string>
 	<key>WCUUID</key>
-	<string>9DF1F4D6-16BA-4D18-88D2-155CF262035F</string>
+	<string>7A95638E-798D-437C-9404-08E7DC68655B</string>
 	<key>WCEditable</key>
 	<integer>0</integer>
 	<key>WCDebugModeEnabled</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>WCAutoShowLog</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>WCTransparentBackground</key>
-	<integer>1</integer>
+	<integer>0</integer>
+	<key>WCUsesEnvironment</key>
+	<integer>0</integer>
 </dict>
 </plist>

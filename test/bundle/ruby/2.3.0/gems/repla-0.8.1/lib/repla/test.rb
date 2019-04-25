@@ -52,9 +52,9 @@ module Repla
                                       'title.js')
     # Plugins
     TEST_PLUGIN_DIRECTORY = File.join(TEST_DIRECTORY, 'packages')
-    HELLOWORLD_PLUGIN_FILE = File.join(TEST_PLUGIN_DIRECTORY,
-                                       'HelloWorld.replaplugin')
-    HELLOWORLD_PLUGIN_NAME = 'HelloWorld'.freeze
+    TEST_HELLOWORLD_PLUGIN_FILE = File.join(TEST_PLUGIN_DIRECTORY,
+                                            'HelloWorld.replaplugin')
+    TEST_HELLOWORLD_PLUGIN_NAME = 'HelloWorld'.freeze
     TEST_SERVER_PLUGIN_NAME = 'TestServer'.freeze
     TEST_SERVER_PLUGIN_FILE = File.join(TEST_PLUGIN_DIRECTORY,
                                         'TestServer.replaplugin')
@@ -71,6 +71,9 @@ module Repla
     INVALID_PLUGIN_FILE = File.join(TEST_PLUGIN_DIRECTORY,
                                     'Invalid.replaplugin')
     INVALID_PLUGIN_NAME = 'Invalid'.freeze
+    TEST_ENVIRONMENT_PLUGIN_FILE = File.join(TEST_PLUGIN_DIRECTORY,
+                                             'TestEnvironment.replaplugin')
+    TEST_ENVIRONMENT_PLUGIN_NAME = 'TestEnvironment'.freeze
 
     # Local Asssets
 

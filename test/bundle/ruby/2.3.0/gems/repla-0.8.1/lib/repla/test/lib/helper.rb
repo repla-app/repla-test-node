@@ -11,8 +11,9 @@ module Repla
                                         'applescript')
 
       def self.run_javascript(javascript)
-        # `osascript` requires redirecting stderr to stdout for some reason
-        `osascript -l JavaScript -e \
+        # `/usr/bin/osascript` requires redirecting stderr to stdout for some
+        # reason
+        `/usr/bin/osascript -l JavaScript -e \
         #{Shellwords.escape(javascript)} 2>&1`.chomp!
         # return `node -e #{Shellwords.escape(javascript)}`
       end
@@ -74,7 +75,7 @@ module Repla
       # TODO: `self.run_applescript` should be private but now all of a sudden
       # instances method can't call private class methods?
       def self.run_applescript(script, arguments = nil)
-        command = "osascript #{Shellwords.escape(script)}"
+        command = "/usr/bin/osascript #{Shellwords.escape(script)}"
         if arguments
           arguments.each do |argument|
             if argument

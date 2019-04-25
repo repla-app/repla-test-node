@@ -4,4 +4,4 @@ ruby_engine = defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'
 ruby_version = RbConfig::CONFIG["ruby_version"]
 path = File.expand_path('..', __FILE__)
 $:.unshift "#{path}/"
-$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/repla-0.8.0/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/repla-0.8.1/lib"

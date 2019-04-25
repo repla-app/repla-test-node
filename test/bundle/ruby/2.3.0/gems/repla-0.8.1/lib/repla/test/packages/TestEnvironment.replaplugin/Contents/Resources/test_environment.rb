@@ -27,4 +27,10 @@ class TestEnviroment < Test::Unit::TestCase
     assert(window_id.integer?)
     assert(window_id.to_i > 0)
   end
+
+  def test_message_key
+    assert(ENV.key?(TEST_MESSAGE_KEY))
+    message = ENV[TEST_MESSAGE_KEY]
+    assert_equal(message, TEST_MESSAGE_VALUE)
+  end
 end

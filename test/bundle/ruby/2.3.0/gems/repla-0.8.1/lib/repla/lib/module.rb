@@ -29,6 +29,14 @@ module Repla
     run_applescript(RUN_PLUGIN_SCRIPT, parameters)
   end
 
+  RUN_PLUGIN_WITH_ENVIRONMENT_SCRIPT = File.join(
+    APPLESCRIPT_DIRECTORY, 'run_plugin_with_environment.scpt'
+  )
+  def self.run_plugin_with_environment(name, environment)
+    parameters = [name, environment]
+    run_applescript(RUN_PLUGIN_WITH_ENVIRONMENT_SCRIPT, parameters)
+  end
+
   RUN_PLUGIN_IN_SPLIT_SCRIPT = File.join(APPLESCRIPT_DIRECTORY,
                                          'run_plugin_in_split.scpt')
   def self.run_plugin_in_split(name, window_id, split_id)
@@ -79,8 +87,8 @@ module Repla
   # TODO: `self.run_applescript` should be private but now all of a sudden
   # instances method can't call private class methods?
   def self.run_applescript(script, arguments = nil)
-    # command = "osascript #{script.shell_escape}"
-    command = "osascript #{script}"
+    # command = "/usr/bin/osascript #{script.shell_escape}"
+    command = "/usr/bin/osascript #{script}"
 
     if arguments
       command += ' ' + arguments.compact.map(&:to_s).map do |x|
