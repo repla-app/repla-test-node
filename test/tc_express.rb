@@ -6,12 +6,12 @@ require_relative 'lib/test_setup'
 # Test server
 class TestServer < Minitest::Test
   EXTERNAL_DIRECTORY = File.expand_path(File.join(__dir__,
-                                                 '../../repla-test-express/'))
+                                                  '../../repla-test-express/'))
   EXTERNAL_COMMAND = 'DEBUG=myapp:* npm start'.freeze
   HTML_TITLE = 'Express'.freeze
   def setup
     Dir.chdir(EXTERNAL_DIRECTORY) do
-      `#{SERVER_BUNDLE_COMMAND} "#{EXTERNAL_COMMAND}"`
+      `#{SERVER_BUNDLE_COMMAND} -p 3000 "#{EXTERNAL_COMMAND}"`
     end
     window_id = nil
     Repla::Test.block_until do
