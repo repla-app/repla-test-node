@@ -1,17 +1,18 @@
 #!/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby
 
 require 'minitest/autorun'
-require_relative '../lib/test_setup'
-
-EXPRESS_DIRECTORY = File.expand_path(File.join(__dir__,
-                                               '../../repla-test-express/'))
-EXPRESS_COMMAND = 'DEBUG=myapp:* npm start'.freeze
-EXPRESS_HTML_TITLE = 'Express'.freeze
+require_relative 'lib/test_setup'
 
 # Test server
 class TestServer < Minitest::Test
+  EXTERNAL_DIRECTORY = File.expand_path(File.join(__dir__,
+                                                  '../../repla-test-express/'))
+  EXTERNAL_COMMAND = 'DEBUG=myapp:* npm start'.freeze
+  HTML_TITLE = 'Express'.freeze
   def setup
-    `#{SERVER_BUNDLE_COMMAND} "#{EXPRESS_COMMAND}"`
+    Dir.chdir(EXTERNAL_DIRECTORY) do
+      `#{SERVER_BUNDLE_COMMAND} -p 3000 "#{EXTERNAL_COMMAND}"`
+    end
     window_id = nil
     Repla::Test.block_until do
       window_id = Repla::Test::Helper.window_id
@@ -30,8 +31,8 @@ class TestServer < Minitest::Test
     result = nil
     Repla::Test.block_until do
       result = @window.do_javascript(javascript)
-      result == EXPRESS_HTML_TITLE
+      result == HTML_TITLE
     end
-    assert_equal(EXPRESS_HTML_TITLE, result)
+    assert_equal(HTML_TITLE, result)
   end
 end
