@@ -5,8 +5,9 @@ require_relative 'lib/test_setup'
 
 # Test server
 class TestServer < Minitest::Test
-  EXTERNAL_DIRECTORY = File.expand_path(File.join(__dir__,
-                                                  '../../repla-test-express/'))
+  EXTERNAL_DIRECTORY = File.expand_path(
+    File.join(__dir__, '../external/repla-test-express/')
+  )
   EXTERNAL_COMMAND = 'DEBUG=myapp:* npm start'.freeze
   HTML_TITLE = 'Express'.freeze
   def setup
