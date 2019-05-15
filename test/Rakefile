@@ -1,11 +1,11 @@
 require 'shellwords'
 
-task default: %i[express]
+task default: %i[node]
 
-task express: ['express:tests']
+task node: ['node:tests']
 
-namespace :express do
-  task tests: [:test_express]
+namespace :node do
+  task tests: %i[test_express]
 
   task :test_express do
     express_tests_file = File.join(__dir__, 'tc_express.rb')
