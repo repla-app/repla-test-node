@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WCName</key>
+	<string>TestLog</string>
+	<key>WCCommand</key>
+	<string>run.sh</string>
+	<key>WCUUID</key>
+	<string>7A95638E-798D-437C-9404-08E7DC68655B</string>
+	<key>WCEditable</key>
+	<integer>0</integer>
+	<key>WCDebugModeEnabled</key>
+	<integer>0</integer>
+	<key>WCAutoShowLog</key>
+	<integer>0</integer>
+	<key>WCTransparentBackground</key>
+	<integer>0</integer>
+	<key>WCUsesEnvironment</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -16,6 +16,7 @@ test:
 
 bundle_update:
 	cd ./test/ &&\
+		bundle update repla --full-index &&\
 		bundle update &&\
 		bundle clean &&\
 		bundle install --standalone
