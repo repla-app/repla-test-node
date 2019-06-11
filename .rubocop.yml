@@ -25,4 +25,6 @@ AllCops:
     - '**/node_modules/**/*'
     - '**/vendor/**/*'
     - '**/bundle/**/*'
-
+Metrics/LineLength:
+  Exclude:
+    - 'test/tc_express.rb'
