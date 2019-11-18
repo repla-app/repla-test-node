@@ -1,4 +1,4 @@
-.PHONY: ci ac autocorrect lint
+.PHONY: ci ac autocorrect lint test
 
 ci: lint
 ac: autocorrect
