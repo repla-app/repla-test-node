@@ -27,3 +27,4 @@ AllCops:
     - '**/node_modules/**/*'
     - '**/vendor/**/*'
     - '**/bundle/**/*'
+    - '**/external/**/*'
