@@ -1,13 +1,13 @@
-.PHONY: ci ac autocorrect lint test
+.PHONY: ci ac autocorrect lint
 
 ci: lint
 ac: autocorrect
 
 lint:
-	git ls-files "*.rb" "*Rakefile" "*Gemfile" ":(exclude)test/bundle" -z |\
-		xargs -0 rubocop
+	rubocop
 
 autocorrect:
+	rubocop -a
 	git ls-files "*.rb" "*Rakefile" "*Gemfile" ":(exclude)test/bundle" -z |\
 		xargs -0 rubocop -a
 

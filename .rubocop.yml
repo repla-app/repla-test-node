@@ -1,13 +1,15 @@
 Metrics/PerceivedComplexity:
-  Max: 8
+  Max: 16
 Metrics/MethodLength:
   Max: 60
 Metrics/AbcSize:
   Max: 60
 Metrics/CyclomaticComplexity:
-  Max: 8
+  Max: 16
 Metrics/BlockLength:
   Max: 50
+Metrics/ClassLength:
+  Max: 200
 Style/SymbolProc:
   # Style/SymbolProc can break when using map with refine in Ruby 2.4>
   Enabled: false
@@ -25,6 +27,3 @@ AllCops:
     - '**/node_modules/**/*'
     - '**/vendor/**/*'
     - '**/bundle/**/*'
-Metrics/LineLength:
-  Exclude:
-    - 'test/tc_express.rb'
