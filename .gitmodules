@@ -1,3 +1,6 @@
 [submodule "external/repla-test-express"]
 	path = external/repla-test-express
 	url = https://github.com/repla-app/repla-test-express.git
+[submodule "external/repla-test-react"]
+	path = external/repla-test-react
+	url = https://github.com/repla-app/repla-test-react.git
