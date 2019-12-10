@@ -30,7 +30,7 @@ class TestReact < Minitest::Test
   def test_react
     javascript = File.read(Repla::Test::TITLE_JAVASCRIPT_FILE)
     result = nil
-    Repla::Test.block_until do
+    Repla::Test.block_until_with_timeout(8) do
       result = @window.do_javascript(javascript)
       result == HTML_TITLE
     end
