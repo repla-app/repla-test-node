@@ -5,7 +5,12 @@ task default: %i[node]
 task node: ['node:tests']
 
 namespace :node do
-  task tests: %i[test_express]
+  task tests: %i[test_express test_react]
+
+  task :test_react do
+    react_tests_file = File.join(__dir__, 'tc_react.rb')
+    ruby Shellwords.escape(react_tests_file)
+  end
 
   task :test_express do
     express_tests_file = File.join(__dir__, 'tc_express.rb')
