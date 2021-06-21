@@ -1,13 +1,16 @@
-.PHONY: ci ac autocorrect lint test
+.PHONY: ci ac autocorrect lint test gem_install
 
-ci: lint
+ci: gem_install lint
 ac: autocorrect
 
 lint:
-	rubocop
+	bundle exec rubocop
 
 autocorrect:
-	rubocop -a
+	bundle exec rubocop -a
+
+gem_install:
+	bundle install --path vendor/bundle
 
 test:
 	./test/run_tests.sh
